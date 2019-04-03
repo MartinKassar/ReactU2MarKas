@@ -1,0 +1,18 @@
+.box {
+    -webkit-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75);
+    height: 200px;
+    width: 200px;
+    
+}
+
+.interface {
+    background: red;
+}
+
+.parentBox {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
