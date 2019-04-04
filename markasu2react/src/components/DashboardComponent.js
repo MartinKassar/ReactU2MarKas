@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import WrapperComponent from './WrapperComponent'
 import styles from './wrapper.module.css'
 import { UserComponent } from './UserComponent'
+import { CardComponent } from './CardComponent';
+import { Link } from 'react-router-dom'
+
 
 // This class works as a dashboard that renders all components
 class DashboardComponent extends Component {
@@ -57,17 +60,23 @@ class DashboardComponent extends Component {
 
   render() {
     // I create a new const to assing a map method through the state userList, we send this const as a props to UserComponent
-    const nameList = this.state.userList.map((users, i) => <li key={i}>{users}</li>) 
+    const nameList = this.state.userList.map((users, i) => 
+    
+    <Link key ={i} to={`/user/${users}`}>
+      <li key={i}>{users}</li>
+    </Link>
+)
+    
     return (
       <div className={styles.parentBox}>
 
-        <WrapperComponent>
+        <CardComponent>
 
           <UserComponent myList={nameList} userColor={this.state.textColor} />
           <button onClick={this.changeColor}>toggle</button>
-        </WrapperComponent>
+        </CardComponent>
 
-        <WrapperComponent>
+        <CardComponent>
           <div>
 
             <input value={this.state.value} onChange={this.handleChange} />
@@ -77,7 +86,7 @@ class DashboardComponent extends Component {
 
           </div>
 
-        </WrapperComponent>
+        </CardComponent>
 
 
       </div>

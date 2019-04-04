@@ -5,11 +5,11 @@ export class NavBarComponent extends Component {
   render() {
     return (
       <div>
-        <NavLink to ='/login'>login</NavLink>
+        <NavLink to ='/login' activeClassName='selected'>login</NavLink>
         <br />
-        <NavLink to ='/dashboard'>Dashboard</NavLink>
+        <NavLink to ='/dashboard' activeClassName='selected'>Dashboard</NavLink>
         <br />
-        <NavLink to ='/user'>User</NavLink>
+        <NavLink to ='/user' activeClassName='selected'>User</NavLink>
       </div>
     )
   }

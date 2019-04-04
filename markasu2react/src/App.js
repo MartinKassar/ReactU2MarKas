@@ -15,11 +15,13 @@ class App extends Component {
       <div>
       <BrowserRouter>
       <NavBarComponent />
+      <Route path="/" exact component={LoginScreen} />
       <Route path="/login" component={LoginScreen} />
       <Route path="/dashboard" component={DashboardScreen} />
-      <Route path="/user" component={UserScreen} />
+      <Route path="/user" exact component={UserScreen} />
+      <Route path="/user/:user" exact component={UserScreen} />
+      
       </BrowserRouter>
-      <LoginScreen/>
       </div>
     );
   }
