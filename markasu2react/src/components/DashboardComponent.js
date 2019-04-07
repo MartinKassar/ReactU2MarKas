@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import WrapperComponent from './WrapperComponent'
 import styles from './wrapper.module.css'
 import { UserComponent } from './UserComponent'
 import { CardComponent } from './CardComponent';
@@ -60,13 +59,14 @@ class DashboardComponent extends Component {
 
   render() {
     // I create a new const to assing a map method through the state userList, we send this const as a props to UserComponent
-    const nameList = this.state.userList.map((users, i) => 
-    
-    <Link key ={i} to={`/user/${users}`}>
-      <li key={i}>{users}</li>
-    </Link>
-)
-    
+    //I also define a link to a route on every user.
+    const nameList = this.state.userList.map((users, i) =>
+
+      <Link key={i} to={`/user/${users}`}>
+        <li key={i}>{users}</li>
+      </Link>
+    )
+
     return (
       <div className={styles.parentBox}>
 

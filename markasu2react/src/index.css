@@ -1,15 +1,3 @@
-body {
-  display: flex;
-  flex-direction: space-around;
-
-
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -18,4 +6,20 @@ code {
 
 .selected {
   color: red;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+
+.navBar ul li {
+  width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 33px;
+    display: inline-block;
+    margin: 0;
 }

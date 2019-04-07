@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import CardComponent from '../components/CardComponent';
-import WrapperComponent from '../components/WrapperComponent';
+
 
 
 export class LoginScreen extends Component {
 
+  //This click event will push dashboard into history, meaning, it will route us to dashboardScreen
   redirectToDash = () => {
     this.props.history.push('/dashboard')
   }
