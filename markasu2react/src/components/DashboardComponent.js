@@ -22,9 +22,10 @@ class DashboardComponent extends Component {
   }
 
   //This function adds user to the state userList
-  //Since its immutable, we have to create a new array first and make it equal to the state userList
+  //Since its immutable, we have to create a new array first and copy values of the state.userList
   //Then we have to push the state value (from input) to the useArray
   //Then we set the state userList to the new array, that is userArray.
+  
   addUser = () => {
     let userArray = [...this.state.userList];
     userArray.push(this.state.value)
@@ -36,7 +37,7 @@ class DashboardComponent extends Component {
   // Then we pop a user from our new array, that is userArray.
   //Then we set state UserList to our new array, that is userArray.
   removeUser = () => {
-    let userArray = this.state.userList
+    let userArray = [...this.state.userList];
     userArray.pop()
     this.setState({ userList: userArray })
 
