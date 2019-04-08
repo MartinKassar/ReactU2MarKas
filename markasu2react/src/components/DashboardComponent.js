@@ -26,7 +26,7 @@ class DashboardComponent extends Component {
   //Then we have to push the state value (from input) to the useArray
   //Then we set the state userList to the new array, that is userArray.
   addUser = () => {
-    let userArray = this.state.userList
+    let userArray = [...this.state.userList];
     userArray.push(this.state.value)
     this.setState({ userList: userArray })
 
